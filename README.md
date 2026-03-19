@@ -2,7 +2,7 @@
 
 A fully responsive personal portfolio website built with **React.js**, **Tailwind CSS**, and **Vite**.
 
-🔗 **Live Demo:** [jeet-portfolio.vercel.app](https://jeet-portfolio.vercel.app)
+🔗 **Live Demo:** [portfolio-theta-lake-97.vercel.app
 
 ---
 

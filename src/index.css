@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap');
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Mono', monospace; cursor: none; overflow-x: hidden; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #09090b; }
+  ::-webkit-scrollbar-thumb { background: #1c1c24; border-radius: 2px; }
+}
+
+@layer components {
+  .section-label {
+    display: flex; align-items: center; gap: 0.5rem;
+    color: #c8f53f; font-size: 0.65rem;
+    letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 0.75rem;
+  }
+  .section-label::before {
+    content: ''; display: inline-block;
+    width: 18px; height: 1px; background: #c8f53f; flex-shrink: 0;
+  }
+  .reveal {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  .hero-line { overflow: hidden; display: block; }
+  .hero-word {
+    display: block; opacity: 0; transform: translateY(110%);
+    transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1);
+  }
+  .hero-word.in { opacity: 1; transform: translateY(0); }
+
+  .tech-tag {
+    font-size: 0.68rem; letter-spacing: 0.06em;
+    border: 1px solid #1c1c24; color: #64647a;
+    padding: 0.28rem 0.7rem;
+    transition: all 0.2s;
+  }
+  .tech-tag:hover { border-color: #c8f53f; color: #c8f53f; }
+
+  .btn-primary {
+    background: #c8f53f; color: #09090b; font-weight: 600;
+    font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.85rem 2.2rem; display: inline-block;
+    text-decoration: none; transition: all 0.22s; font-family: 'DM Mono', monospace;
+  }
+  .btn-primary:hover { background: #d9ff50; transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent; color: #e8e8ec;
+    border: 1px solid #1c1c24;
+    font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.85rem 2.2rem; display: inline-block;
+    text-decoration: none; transition: all 0.22s; font-family: 'DM Mono', monospace;
+  }
+  .btn-outline:hover { border-color: #c8f53f; color: #c8f53f; transform: translateY(-2px); }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(#1c1c24 1px, transparent 1px),
+      linear-gradient(90deg, #1c1c24 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+  }
+}

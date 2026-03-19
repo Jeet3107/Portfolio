@@ -17,7 +17,7 @@ const PROJECTS = [
   },
   {
     num: "02",
-    title: "Full-Stack E-Commerce App",
+    title: "Full-Stack E-Commerce App-ShopEase",
     desc: "Scalable e-commerce platform with product listings, cart management, order tracking, and a dedicated admin dashboard. JWT-based auth with role-based access control. MongoDB Atlas for cloud-hosted, high-availability data. Mobile-responsive UI built with Tailwind CSS and a consistent component library.",
     tags: [
       "React.js",
@@ -27,7 +27,7 @@ const PROJECTS = [
       "Tailwind CSS",
       "JWT",
     ],
-    github: "https://github.com/Jeet3107",
+    github: "https://github.com/Jeet3107/E-commerce---ShopEase",
     live: null,
   },
   {
@@ -36,7 +36,7 @@ const PROJECTS = [
     desc: "Fully responsive personal portfolio with smooth scroll animations, dark mode toggle, and live project and GitHub links. Focused on performance and accessibility, achieving a mobile-first layout compatible with all major browsers.",
     tags: ["React.js", "Tailwind CSS", "JavaScript", "Vite"],
     github: "https://github.com/Jeet3107/Portfolio",
-    live: null,
+    live: https://portfolio-theta-lake-97.vercel.app/,
   },
 ];
 
